@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mushrooms</title>
+</head>
+<body ng-app="mushroomApp">
+	<div ng-include="'partials/heading.html'">
+	</div>
+	<input ng-model="search.description">
+	<input type="radio" name="poisonous" ng-model="search.edible" value="true">Non-poisonous
+	<input type="radio" name="poisonous" ng-model="search.edible" value="false">Poisonous
+	<div ng-view>
+		<!-- test -->
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	<script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+	<script src="app/mushroomApp.js"></script>
+	<script src="app/controllers/mushroomCtrl.js"></script>
+	<script src="app/factories/mushroomFactory.js"></script>
+</body>
+</html>

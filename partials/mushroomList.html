@@ -1,0 +1,10 @@
+<article class="mushroom-list">
+	<header><h3>List of Mushrooms</h3></header>
+	<section>
+		<div ng-repeat="mushroom in mushrooms | filter:search:strict">
+			<h5 style="text-transform: capitalize">{{mushroom.name}}</h5>
+			<p>{{mushroom.description}}</p>
+			<p></p>
+		</div>
+	</section>	
+</article>
